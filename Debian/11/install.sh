@@ -5,7 +5,7 @@ echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt
 wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 apt-get update -y
 apt-get -y install apache2 libapache2-mod-php8.0 php8.0
-apt-get -y install php php-common php-xml php-gd php-mbstring php-tokenizer php-json php-bcmath php-zip php-curl -y
+apt-get -y install php php-common php8.0-xml php8.0-gd php8.0-mbstring php-tokenizer php8.0-bcmath php8.0-zip php8.0-curl unzip -y
 systemctl restart apache2
 rm -rf /var/www/html/index.html
 git clone https://github.com/IPPWorldwide/MerchantPortal.git /var/www/html/
