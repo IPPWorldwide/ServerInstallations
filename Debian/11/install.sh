@@ -9,3 +9,5 @@ apt-get -y install php php-common php-xml php-gd php-mbstring php-tokenizer php-
 systemctl restart apache2
 rm -rf /var/www/html/index.html
 git clone https://github.com/IPPWorldwide/MerchantPortal.git /var/www/html/
+chown -R www-data /var/www/html/
+chgrp -R www-data /var/www/html/
