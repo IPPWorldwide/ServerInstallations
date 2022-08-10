@@ -1,4 +1,5 @@
 apt-get update
+dpkg --configure -a
 apt-get -y upgrade
 apt-get -y install ca-certificates apt-transport-https software-properties-common -y
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
