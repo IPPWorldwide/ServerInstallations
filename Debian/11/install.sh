@@ -1,5 +1,5 @@
 apt-get update
-sudo dpkg --configure -a
+sudo su -c "echo 'Dpkg::Options { "--force-confnew"; };' >> /etc/apt/apt.conf.d/71debconf"
 apt-get -y upgrade
 apt-get -y install ca-certificates apt-transport-https software-properties-common -y
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | tee /etc/apt/sources.list.d/sury-php.list
